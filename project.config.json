@@ -1,0 +1,13 @@
+{
+	"client": "./client",
+	"svr": "./server",
+	"miniprogramRoot": "./client",
+	"qcloudRoot": "./server",
+	"setting": {
+		"newFeature": true
+	},
+	"appid": "wx4e11238a3e13dc81",
+	"projectname": "shop",
+	"libVersion": "1.9.94",
+	"condition": {}
+}
