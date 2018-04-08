@@ -31,19 +31,19 @@ App({
     if (userInfo) {
       page.setData({
         userInfo,
-        openId: userInfo.openId
+        openId: userInfo.data.data.openId
       })
       if (openIdReadyCallback) {
-        openIdReadyCallback(userInfo.openId)
+        openIdReadyCallback(userInfo.data.data.openId)
       }
     } else {
       this.userInfoReadyCallback = (userInfo) => {  //获取用户信息后的回调函数
         page.setData({  //每个page都会自动存储userInfo和openId
           userInfo,
-          openId: userInfo.openId
+          openId: userInfo.data.data.openId
         })
         if (openIdReadyCallback) {  //如果设置了openid的回调函数，则调用回调
-          openIdReadyCallback(userInfo.openId)
+          openIdReadyCallback(userInfo.data.data.openId)
         }
       }
     }
