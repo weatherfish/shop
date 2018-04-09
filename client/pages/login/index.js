@@ -35,11 +35,12 @@ Page({
     // 调用登录接口
     qcloud.login({
       success(result) {
-        console.log("111", result)
         if (result) {
           util.showSuccess('登录成功')
-          app.globalData.userInfo = result
+          app.globalData.userInfo = result.data.data
           app.globalData.logged = true
+          console.log("111", result.data.data)
+          wx.setStorageSync("WX_userInfo_weatherfish", result.data.data)
           callback()
         } else {
           // 如果不是首次登录，不会返回用户信息，请求用户信息接口获取
@@ -47,10 +48,11 @@ Page({
             url: config.service.requestUrl,
             login: true,
             success(result) {
-              console.log("222", result)
               util.showSuccess('登录成功')
-              app.globalData.userInfo = result
+              app.globalData.userInfo = result.data.data
               app.globalData.logged = true
+              console.log("222", result.data.data)
+              wx.setStorageSync("WX_userInfo_weatherfish", result.data.data)
               callback()
             },
 
