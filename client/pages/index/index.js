@@ -26,7 +26,9 @@ Page({
     onLoad(){
       app.pageGetUserInfo(this)
       
-      this.banner = app.HttpResource('/banner/:id', { id: '@id' })
+      this.banner = 
+      
+      app.HttpResource('/banner/:id', { id: '@id' })
       this.goods = app.HttpResource('/goods/:id', { id: '@id' })
       this.classify = app.HttpResource('/classify/:id', { id: '@id' })
 

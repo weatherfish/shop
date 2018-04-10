@@ -1,9 +1,9 @@
-
-<swiper indicator-dots="{{indicatorDots}}" 
-  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{ circular }}" bindchange="swiperchange">
-  <block wx:for="{{imgUrls}}" wx:key="images">
-    <swiper-item>
-      <image  src="{{item}}" class="slide-image"/>
-    </swiper-item>
-  </block>
-</swiper>
+<view class="start">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{ circular }}" bindchange="swiperchange">
+    <block wx:for="{{imgUrls}}" wx:key="images">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" bindload="swiperload" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

@@ -21,8 +21,8 @@ Page({
     }
   },
   onShow() { },
-  bindload1(e) {
-    // setTimeout(app.globalData.logged ? this.goIndex : this.goLogin, 3000)
+  swiperload(e) {
+    setTimeout(app.globalData.logged ? this.goIndex : this.goLogin, 3000)
   },
   goIndex() {
     wx.navigateTo({
